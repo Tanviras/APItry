@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fun api</title>
+</head>
+<body>
+    <h1 id="ki-korte-chao"></h1>
+    <h3>Learn from: <a id="explore_link" href="http://www.boredapi.com/api/activity/">Visit this place</a>
+    </h3>
+    <h4>They will show things like these. After every reload,a new activity will be shown
+    </h4>
+</body>
+<script>
+
+    // fetch('http://www.boredapi.com/api/activity/')//niye ashlam server theke
+    // .then(response => response.json())//json a convert kora toh must
+    // .then(json => {
+    //     document.getElementById("ki-korte-chao").innerText=json.activity;//json data ke nijer iccha moto kivabe use korbo,setai ekhane. h1 er moddhe send korlam, okhaner likhata hobe kirokom setao innerText diye bole dilam. json data-er "activity" info tai lagbe.
+
+    //     //fetch er concept clear korar jonno eta khub-e useful
+        
+    // })
+
+
+    //api er kaj ta amra function diyeo shikhechilam
+
+    function doSomethingWhenYouAreBored(){
+        fetch('http://www.boredapi.com/api/activity/')
+    .then(response => response.json())
+    .then(json => {
+        document.getElementById("ki-korte-chao").innerText=json.activity;
+    })
+    }
+
+    //To make it funnier,use setInterval
+    const myVar= setInterval(function(){
+                              doSomethingWhenYouAreBored();
+                     },2000);
+</script>
+</html>

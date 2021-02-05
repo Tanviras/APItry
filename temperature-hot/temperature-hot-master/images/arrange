@@ -1,0 +1,14 @@
+a new object:
+               coord:an object
+               weather:an array:array er vetor object: Oi object er vetor icon:serial 4
+               base:simple
+               main:an object
+               visibility:simple
+               wind:object
+               clouds:object
+               dt:simple
+               sys:object
+               id:simple
+               name:simple
+               cod:simple
+object ended
